@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+}
+.radio-tile-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.input-container{
+    position: relative;
+    height: 7rem;
+    width: 7rem;
+    margin: 0.5rem;
+}
+.input-container input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0;
+
+}
+
+.input-container .radio-tile{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    height: 100%;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    transition: all 300ms ease;
+
+}
+.input-container ion-icon{
+    color: var(--primary-color);
+    font-size: 3rem;
+}
+
+.input-container label{
+    color: var(--primary-color);
+    font-size: 0.80rem;
+    font-weight: 600;
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+
+}
+input:checked + .radio-tile {
+    background-color: #999999;
+    box-shadow: 0 0 12px var#999999;
+}
+input:hover + .radio-tile {
+    box-shadow: 0 0 12px #686868;
+}
+input:checked + .radio-tile ion-icon,
+input:checked + .radio-tile label {
+    color: whitesmoke;
+}
+#Impressum{
+    position: relative;
+    text-align: center;
+}
+</style>
+<body>
+    <div class="container">
+        <div class="radio-tile-group">
+
+            <div class="input-container">
+                <input id="MayrBut" type="button" onclick="window.location.href='mayrhofer.html';" name="radio" value="Killi">
+                <div class="radio-tile">
+                    <label for="MayrBut">Killi</label>
+                </div>
+            </div>
+
+            <div class="input-container">
+                <input id="TobiBut" type="button" onclick="window.location.href='teufel.html';" name="radio" value="Tobi">
+                <div class="radio-tile">
+                    <label for="TobiBut">Tobi</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Impressum">
+        <a href ="">Impressum</a>
+    </div>
+</body>
+</html>
